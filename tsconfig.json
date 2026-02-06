@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    // Type Checking & Safety
+    "types": ["vite-plugin-solid-svg/types-component-solid", "vite/client"],
+    "strict": true,
+
+    // Modules
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "bundler",
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "module": "ESNext",
+    "noEmit": true,
+
+    // General
+    "jsxImportSource": "solid-js",
+    "target": "ESNext",
+    "jsx": "preserve",
+
+  }
+}

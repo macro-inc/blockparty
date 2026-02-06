@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg version="1.1" viewBox="0 0 402 106" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+  <g fill="currentColor">
+    <path d="m0 10v2h20l42 42h12l-40 40h-20v2h42l6-6h48l24-24h23v-2h-25l-54-54h-78zm44 2h12l40 40h-12l-40-40zm54 42 12 12-22 22h-24l34-34z"/>
+    <path d="m84 10v2h18l42 42h29l-40 40h-18v2h40l44-44h-33l-42-42h-40"/>
+    <path d="m360 10-42 42h-12l40-40h8v-2h-30l-54 54h-25v2h23l24 24h33v-2h-11l-22-22 12-12 42 42h42v-2h-20l-40-40h12l42-42h20v-2z"/>
+    <path d="m318 10v2h-18l-42 42h-29l40 40h18v2h-40l-44-44h33l42-42h40"/>
+  </g>
+  <g fill="none" stroke-width="2" stroke="currentColor">
+    <rect x="149" y="1" width="104" height="104"/>
+    <circle cx="201" cy="53" r="52"/>
+  </g>
+</svg>
