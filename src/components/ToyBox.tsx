@@ -34,7 +34,10 @@ export function ToyBox() {
       `}</style>
       <div
         style="
+          border: 1px solid var(--c4);
+          box-sizing: border-box;
           display: grid;
+          padding: 20px;
           gap: 20px;
         "
       >

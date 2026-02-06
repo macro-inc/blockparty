@@ -285,6 +285,7 @@ export function ThemeEditorBasic(){
           ref={canvasContainerRef}
           style="
             border: 1px solid var(--c4);
+            box-sizing: border-box;
             position: relative;
             height: 66px;
             width: 100%;
