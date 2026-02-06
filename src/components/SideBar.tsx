@@ -2,11 +2,13 @@ import { Presentations } from './Presentations';
 import { ToyBox, activeToy } from './ToyBox';
 import { createEffect, on } from 'solid-js';
 import { Description } from './Description';
-import { EmailForm } from "./EmailForm";
+import { breakpoint } from '../utils/utils';
+import { EmailForm } from './EmailForm';
+import { Display } from './Display';
 import { Banner } from "./Banner";
 import { Prints } from './Prints';
-import { Hosts } from "./Hosts";
-import { Info } from "./Info";
+import { Hosts } from './Hosts';
+import { Info } from './Info';
 
 
 export function SideBar() {
@@ -21,17 +23,19 @@ export function SideBar() {
       class="sidebar-wrapper"
     >
       <div
-        style="
-          grid-template-rows: min-content 1fr min-content;
-          background-color: var(--b1);
-          border: 1px solid var(--c4);
-          box-sizing: border-box;
-          display: grid;
-          height: 100%;
-          width: 100%;
-        "
+        style={{
+          'grid-template-rows': breakpoint() ? '1fr min-content' : 'min-content 1fr min-content',
+          'background-color': 'var(--b1)',
+          'border': '1px solid var(--c4)',
+          'box-sizing': 'border-box',
+          'display': 'grid',
+          'height': '100%',
+          'width': '100%',
+        }}
       >
-        <Banner/>
+        <Display when={!breakpoint()}>
+          <Banner/>
+        </Display>
         <div
           ref={scrollRef}
           style="
@@ -49,6 +53,9 @@ export function SideBar() {
             gap: 20px;
           "
         >
+          <Display when={breakpoint()}>
+            <Banner/>
+          </Display>
           <Description/>
           <Presentations/>
           <Hosts/>

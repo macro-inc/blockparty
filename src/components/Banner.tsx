@@ -1,30 +1,25 @@
 import BlockLogo from '../assets/block-logo.svg';
+import { breakpoint } from '../utils/utils';
+import { Display } from './Display';
 
 export function Banner() {
   return (
-    <>
-      <style>{`
-        @media(max-width: 1000px){
-          .hide-logo{
-            display: none !important;
-          }
-        }
-      `}</style>
-      <div
+    <div
+      style={{
+        'border-bottom': breakpoint() ? 'none' : '1px dashed var(--c4)',
+        'padding': breakpoint() ? '0' : '20px',
+        'display': 'grid',
+        'gap': '20px',
+      }}
+    >
+      <BlockLogo
         style="
-          border-bottom: 1px dashed var(--c4);
-          display: grid;
-          padding: 20px;
-          gap: 20px;
+          aspect-ratio: 402 / 106;
+          flex-shrink: 0;
+          width: 100%;
         "
-      >
-        <BlockLogo
-          style="
-            aspect-ratio: 402 / 106;
-            flex-shrink: 0;
-            width: 100%;
-          "
-        />
+      />
+      <Display when={!breakpoint()}>
         <div
           style="
             grid-template-columns: repeat(16, 1fr);
@@ -32,7 +27,6 @@ export function Banner() {
             display: grid;
             width: 100%;
           "
-          class="hide-logo"
         >
           <div>B</div>
           <div>L</div>
@@ -51,7 +45,7 @@ export function Banner() {
           <div>.</div>
           <div>2</div>
         </div>
-      </div>
-    </>
+      </Display>
+    </div>
   );
 }
