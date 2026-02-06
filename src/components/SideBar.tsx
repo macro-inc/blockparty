@@ -1,11 +1,13 @@
 import { Presentations } from './Presentations';
 import { ToyBox, activeToy } from './ToyBox';
-import { EmailForm } from "./EmailForm";
 import { createEffect, on } from 'solid-js';
+import { Description } from './Description';
+import { EmailForm } from "./EmailForm";
 import { Banner } from "./Banner";
 import { Prints } from './Prints';
 import { Hosts } from "./Hosts";
 import { Info } from "./Info";
+
 
 export function SideBar() {
   let scrollRef!: HTMLDivElement;
@@ -20,7 +22,7 @@ export function SideBar() {
     >
       <div
         style="
-          grid-template-rows: 1fr min-content;
+          grid-template-rows: min-content 1fr min-content;
           background-color: var(--b1);
           border: 1px solid var(--c4);
           box-sizing: border-box;
@@ -29,6 +31,7 @@ export function SideBar() {
           width: 100%;
         "
       >
+        <Banner/>
         <div
           ref={scrollRef}
           style="
@@ -46,7 +49,7 @@ export function SideBar() {
             gap: 20px;
           "
         >
-          <Banner/>
+          <Description/>
           <Presentations/>
           <Hosts/>
           <Prints/>
