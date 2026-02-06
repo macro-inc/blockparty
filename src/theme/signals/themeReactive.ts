@@ -61,7 +61,7 @@ const ALL_THEME_SIGNALS = [
   themeReactive.b2.l[0], themeReactive.b2.c[0], themeReactive.b2.h[0],
   themeReactive.b3.l[0], themeReactive.b3.c[0], themeReactive.b3.h[0],
   themeReactive.b4.l[0], themeReactive.b4.c[0], themeReactive.b4.h[0],
-  themeReactive.c0.l[0], themeReactive.c0.h[0], themeReactive.c0.c[0],
+  themeReactive.c0.l[0], themeReactive.c0.c[0], themeReactive.c0.h[0],
   themeReactive.c1.l[0], themeReactive.c1.c[0], themeReactive.c1.h[0],
   themeReactive.c2.l[0], themeReactive.c2.c[0], themeReactive.c2.h[0],
   themeReactive.c3.l[0], themeReactive.c3.c[0], themeReactive.c3.h[0],
