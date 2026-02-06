@@ -9,7 +9,7 @@ export function EmailForm() {
     e.preventDefault();
     setStatus('sending');
 
-    const res = await fetch('https://bpv2-email-worker.destruct.workers.dev', {
+    const res = await fetch('https://bpv2.macroverse.workers.dev/', {
       body: JSON.stringify({ name: name(), email: email() }),
       headers: { 'Content-Type': 'application/json' },
       method: 'POST',
