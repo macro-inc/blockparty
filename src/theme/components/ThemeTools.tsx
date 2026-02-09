@@ -72,14 +72,15 @@ export function ThemeTools() {
             width: 20px;
           "
         />
-        <IconClipboard
+
+        {/*<IconClipboard
           onPointerDown={() => {copyThemeToClipboard(themeName.innerText)}}
           style="
             display: block;
             height: 20px;
             width: 20px;
           "
-        />
+        />*/}
 
         <Show when={!isThemeSaved()}>
           <IconSave
