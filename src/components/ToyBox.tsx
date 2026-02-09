@@ -38,19 +38,18 @@ export function ToyBox() {
           border: 1px solid var(--c4);
           box-sizing: border-box;
           display: grid;
-          gap: 20px;
         "
       >
         <div
           style="
             border-bottom: 1px solid var(--c4);
+            background-color: var(--c4);
             justify-content: flex-end;
+            box-sizing: border-box;
             align-items: center;
             display: flex;
-            height: 26px;
             padding: 20px;
-            box-sizing: border-box;
-            background-color: var(--c4);
+            height: 26px;
             width: 100%;
             gap: 20px;
           "

@@ -1,7 +1,7 @@
 import { glassMaterial, glowMaterial, sceneBackground } from '../theme/utils/threeMaterials';
 import { RoundedBoxGeometry, OrbitControls, EXRLoader } from 'three-stdlib';
-import { createNoise3D } from 'simplex-noise';
 import { createSignal, onMount } from 'solid-js';
+import { createNoise3D } from 'simplex-noise';
 import skyExr from '../assets/sky.exr?url';
 import * as THREE from 'three';
 
