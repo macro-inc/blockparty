@@ -15,7 +15,6 @@ export function DitherM() {
         'flex-shrink': '0',
         'height': '155px', // 'height': '124px',
         'width': '220px', // 'width': '176px',
-
       }}
     />
   )

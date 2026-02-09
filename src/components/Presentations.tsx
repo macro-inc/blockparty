@@ -14,7 +14,7 @@ export function Presentations() {
       {/*<a href="https://wobblybits.blog/" target="_blank" class="row"><div>David Allen Feil</div><hr/><div>Wobbly Bits</div></a>*/}
       <a href="https://self.destruct.xxx/" target="_blank" class="row"><div>Russell Boswell</div><hr/><div>Chrome</div></a>
       <a href="https://www.frankchiarulli.com/" target="_blank" class="row"><div>Frank Chiarulli</div><hr/><div>RCade</div></a>
-      <a href="https://joachim.work/" target="_blank" class="row"><div>Jacob Beckerman</div><hr/><div>Macro</div></a>
+      <a href="https://macro.com/" target="_blank" class="row"><div>Jacob Beckerman</div><hr/><div>Macro</div></a>
       {/*<a href="https://eieio.games/" target="_blank" class="row"><div>Nolen Royalty</div><hr/><div>SSH Snake</div></a>*/}
       {/*<a href="" target="_blank" class="row"><div>Peter Whidden</div><hr/><div>Poke</div></a>*/}
       <a href="https://greg.technology/" target="_blank" class="row"><div>Greg Sadetsky</div><hr/><div>Disco</div></a>

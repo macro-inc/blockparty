@@ -154,6 +154,7 @@ export function Canvas() {
       <div
         style="
           position: relative;
+          user-select: none;
           cursor: crosshair;
           height: 100%;
           width: 100%;

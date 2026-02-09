@@ -24,6 +24,7 @@ export function Banner() {
           style="
             grid-template-columns: repeat(16, 1fr);
             text-align: center;
+            user-select: none;
             display: grid;
             width: 100%;
           "

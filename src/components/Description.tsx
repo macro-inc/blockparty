@@ -2,9 +2,9 @@ import { SectionLabel } from "./SectionLabel";
 
 export function Description() {
   return (
-    <div>
+    <div style="user-select: none;">
       <SectionLabel text="Blockparty Vol.2" />
-      8 develeopers × 6 minutes. SRC Lower Level. Free screen printing designs by Paal World and Emile Fortune (blanks for sale or byo). Presented by Macro.
+      8 develeopers × 6 minutes. <a href="https://secretrisoclub.com" target="_blank">SRC Lower Level</a>. Free screen printing designs by <a href="https://paal.world/" target="_blank">Paal World</a> and <a href="https://emilefortune.com/" target="_blank">Emile Fortune</a> (blanks for sale or byo). Presented by <a href="https://macro.com/" target="_blank">Macro</a>.
     </div>
   )
 }
