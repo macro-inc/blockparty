@@ -1,8 +1,8 @@
 import { glassMaterial, glowMaterial, sceneBackground } from '../theme/utils/threeMaterials';
 import { RoundedBoxGeometry, OrbitControls, EXRLoader } from 'three-stdlib';
 import { createNoise3D } from 'simplex-noise';
+import { createSignal, onMount } from 'solid-js';
 import skyExr from '../assets/sky.exr?url';
-import { onMount } from 'solid-js';
 import * as THREE from 'three';
 
 function smoothstep(x: number): number {
@@ -14,7 +14,14 @@ function smoothstep(x: number): number {
 const gridSize = 4;
 const count = gridSize * gridSize * gridSize;
 const cubeSize = 0.98;
-const noiseScale = 0.08;
+
+const noiseMax = 0.07
+const noiseMin = 0.5
+
+export const [noiseMult, setNoiseMult] = createSignal(0.9);
+function noiseScale() {
+  return noiseMin + (noiseMax - noiseMin) * noiseMult();
+}
 
 // Noise function
 const noise3D = createNoise3D();
@@ -101,10 +108,11 @@ function animate() {
     const y = positions[i * 3 + 1];
     const z = positions[i * 3 + 2];
 
+
     const noiseValue = (noise3D(
-      x * noiseScale + time,
-      y * noiseScale + time,
-      z * noiseScale + time
+      x * noiseScale() + time,
+      y * noiseScale() + time,
+      z * noiseScale() + time
     ) + 1) * 0.5;
 
     const scale = 0.1 + smoothstep(noiseValue) * 0.9;

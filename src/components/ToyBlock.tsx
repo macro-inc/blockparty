@@ -1,3 +1,5 @@
+import { noiseMult, setNoiseMult } from "./Canvas";
+
 export function ToyBlock() {
   return (
     <div
@@ -156,8 +158,9 @@ export function ToyBlock() {
 
         <div
           style={{
-            // 'left': `${(themeReactive.b0.c[0]() / (themeReactive.a0.c[0]() * 0.8) / 0.37) * 100}%`,
+
             'transform': 'translate(-50%, -50%)',
+            'left': `${noiseMult() * 100}%`,
             'background-color': 'var(--b1)',
             'border': '1px solid var(--c4)',
             'box-sizing': 'border-box',
@@ -170,9 +173,7 @@ export function ToyBlock() {
         />
 
         <input
-          onInput={(e) => {
-            // handleSaturationChange(e);
-          }}
+          onInput={(e) => {setNoiseMult(parseFloat(e.target.value))}}
           class="theme-editor-basic-slider"
           style="
             appearance: none;
@@ -190,9 +191,9 @@ export function ToyBlock() {
             top: 0;
           "
           // ref={sliderSaturationRef}
+          value={noiseMult()}
           step="0.001"
           type="range"
-          value="0"
           max="1.0"
           min="0.0"
         />
