@@ -1,9 +1,9 @@
-import { deleteTheme, exportTheme, invertTheme, saveTheme } from '../utils/themeUtils';
+import { copyThemeToClipboard, deleteTheme, exportTheme, invertTheme, saveTheme } from '../utils/themeUtils';
 import { currentThemeId, isThemeSaved, themes } from '../signals/themeSignals';
 // import { DeprecatedIconButton } from '@core/component/DeprecatedIconButton';
 import { createEffect, createMemo, createSignal, Show } from 'solid-js';
 import IconLightDark from '../../assets/icon-lightdark.svg';
-// import IconClipboard from '../../assets/icon-clipboard.svg';
+import IconClipboard from '../../assets/icon-clipboard.svg';
 import IconRandom from '../../assets/icon-random.svg';
 import { randomizeTheme } from './ThemeEditorBasic';
 import IconTrash from "../../assets/icon-trash.svg";
@@ -66,6 +66,14 @@ export function ThemeTools() {
 
         <IconLightDark
           onPointerDown={invertTheme}
+          style="
+            display: block;
+            height: 20px;
+            width: 20px;
+          "
+        />
+        <IconClipboard
+          onPointerDown={() => {copyThemeToClipboard(themeName.innerText)}}
           style="
             display: block;
             height: 20px;

@@ -85,15 +85,46 @@ export function saveTheme(name: string): void{
   const id = crypto.randomUUID();
   const tokens = getCurrentTokens();
   const newTheme: ThemeV1 = {
-    tokens: tokens,
-    version: 1,
-    name: name,
     id: id,
-
+    name: name,
+    version: 1,
+    tokens: tokens,
   };
   setUserThemes([...userThemes(), newTheme]);
   setCurrentThemeId(id);
   setIsThemeSaved(true);
+}
+
+export function copyThemeToClipboard(name: string){
+  const id = crypto.randomUUID();
+  const tokens = getCurrentTokens();
+
+  const f = (t: { l: number; c: number; h: number }) => `{ l: ${t.l.toFixed(2)}, c: ${t.c.toFixed(2)}, h: ${t.h.toFixed(0).padStart(3, ' ')} }`;
+
+  const themeString = ` {
+  id: '${id}',
+  name: '${name}',
+  version: 1,
+  tokens: {
+    a0: ${f(tokens.a0)},
+    a1: ${f(tokens.a1)},
+    a2: ${f(tokens.a2)},
+    a3: ${f(tokens.a3)},
+    a4: ${f(tokens.a4)},
+    b0: ${f(tokens.b0)},
+    b1: ${f(tokens.b1)},
+    b2: ${f(tokens.b2)},
+    b3: ${f(tokens.b3)},
+    b4: ${f(tokens.b4)},
+    c0: ${f(tokens.c0)},
+    c1: ${f(tokens.c1)},
+    c2: ${f(tokens.c2)},
+    c3: ${f(tokens.c3)},
+    c4: ${f(tokens.c4)},
+  }
+}`;
+
+  navigator.clipboard.writeText(themeString);
 }
 
 export function deleteTheme(id: string): void{
