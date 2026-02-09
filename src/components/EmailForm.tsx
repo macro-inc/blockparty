@@ -38,7 +38,7 @@ export function EmailForm() {
       >
         <div
           style="
-            background-color: var(--b0);
+            background-color: var(--b1);
             justify-content: center;
             display: flex;
           "
@@ -67,7 +67,7 @@ export function EmailForm() {
         </div>
         <div
           style="
-            background-color: var(--b0);
+            background-color: var(--b1);
             justify-content: center;
             display: flex;
           "
