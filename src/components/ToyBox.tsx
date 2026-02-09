@@ -73,7 +73,7 @@ export function ToyBox() {
             <WireLogo
               onPointerDown={() => {setActiveToy('macro')}}
               classList={{
-                'active': activeToy() === 'logo',
+                'active': activeToy() === 'macro',
                 'toy-icon': true,
               }}
             />
