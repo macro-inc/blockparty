@@ -11,7 +11,7 @@ export function SectionLabel({ text }: SectionLabelProps) {
           white-space: nowrap;
           width: min-content;
           user-select: none;
-          color: var(--b0);
+          color: var(--b1);
           padding: 0 10px;
         "
       >

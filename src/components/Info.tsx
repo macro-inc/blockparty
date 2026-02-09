@@ -6,10 +6,6 @@ export function Info() {
   const [emailText, setEmailText] = createSignal(<><span aria-hidden="true">??? </span>russell@macro.com</>);
   const [dateText, setDateText] = createSignal(<>Friday Febuary 27 7pm - 11pm</>);
 
-  function openMaps() {
-    window.location.href = "maps:q=122+Central+Ave+Brooklyn+New+York";
-  }
-
   function copyDate() {
     setDateText(<>·····················copied!</>);
     navigator.clipboard.writeText("Friday Febuary 27 7pm - 11pm");
@@ -44,12 +40,7 @@ export function Info() {
       <div style="user-select: none;">
         <SectionLabel text="Info" />
 
-        <button
-          aria-label="open maps"
-          onClick={openMaps}
-        >
-          122 Central Ave, Brooklyn, NYC
-        </button>
+        <a href="maps:q=122+Central+Ave+Brooklyn+New+York">122 Central Ave, Brooklyn, NYC</a>
 
         <button
           aria-label="copy date"
