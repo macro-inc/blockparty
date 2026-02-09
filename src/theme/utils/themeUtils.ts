@@ -96,34 +96,29 @@ export function saveTheme(name: string): void{
 }
 
 export function copyThemeToClipboard(name: string){
-  const id = crypto.randomUUID();
   const tokens = getCurrentTokens();
-
-  const f = (t: { l: number; c: number; h: number }) => `{ l: ${t.l.toFixed(2)}, c: ${t.c.toFixed(2)}, h: ${t.h.toFixed(0).padStart(3, ' ')} }`;
-
-  const themeString = ` {
-  id: '${id}',
+  const themeString = `{
+  id: '${crypto.randomUUID()}',
   name: '${name}',
   version: 1,
   tokens: {
-    a0: ${f(tokens.a0)},
-    a1: ${f(tokens.a1)},
-    a2: ${f(tokens.a2)},
-    a3: ${f(tokens.a3)},
-    a4: ${f(tokens.a4)},
-    b0: ${f(tokens.b0)},
-    b1: ${f(tokens.b1)},
-    b2: ${f(tokens.b2)},
-    b3: ${f(tokens.b3)},
-    b4: ${f(tokens.b4)},
-    c0: ${f(tokens.c0)},
-    c1: ${f(tokens.c1)},
-    c2: ${f(tokens.c2)},
-    c3: ${f(tokens.c3)},
-    c4: ${f(tokens.c4)},
+    a0: { l: ${tokens.a0.l.toFixed(2)}, c: ${tokens.a0.c.toFixed(2)}, h: ${tokens.a0.h.toFixed(0)} },
+    a1: { l: ${tokens.a1.l.toFixed(2)}, c: ${tokens.a1.c.toFixed(2)}, h: ${tokens.a1.h.toFixed(0)} },
+    a2: { l: ${tokens.a2.l.toFixed(2)}, c: ${tokens.a2.c.toFixed(2)}, h: ${tokens.a2.h.toFixed(0)} },
+    a3: { l: ${tokens.a3.l.toFixed(2)}, c: ${tokens.a3.c.toFixed(2)}, h: ${tokens.a3.h.toFixed(0)} },
+    a4: { l: ${tokens.a4.l.toFixed(2)}, c: ${tokens.a4.c.toFixed(2)}, h: ${tokens.a4.h.toFixed(0)} },
+    b0: { l: ${tokens.b0.l.toFixed(2)}, c: ${tokens.b0.c.toFixed(2)}, h: ${tokens.b0.h.toFixed(0)} },
+    b1: { l: ${tokens.b1.l.toFixed(2)}, c: ${tokens.b1.c.toFixed(2)}, h: ${tokens.b1.h.toFixed(0)} },
+    b2: { l: ${tokens.b2.l.toFixed(2)}, c: ${tokens.b2.c.toFixed(2)}, h: ${tokens.b2.h.toFixed(0)} },
+    b3: { l: ${tokens.b3.l.toFixed(2)}, c: ${tokens.b3.c.toFixed(2)}, h: ${tokens.b3.h.toFixed(0)} },
+    b4: { l: ${tokens.b4.l.toFixed(2)}, c: ${tokens.b4.c.toFixed(2)}, h: ${tokens.b4.h.toFixed(0)} },
+    c0: { l: ${tokens.c0.l.toFixed(2)}, c: ${tokens.c0.c.toFixed(2)}, h: ${tokens.c0.h.toFixed(0)} },
+    c1: { l: ${tokens.c1.l.toFixed(2)}, c: ${tokens.c1.c.toFixed(2)}, h: ${tokens.c1.h.toFixed(0)} },
+    c2: { l: ${tokens.c2.l.toFixed(2)}, c: ${tokens.c2.c.toFixed(2)}, h: ${tokens.c2.h.toFixed(0)} },
+    c3: { l: ${tokens.c3.l.toFixed(2)}, c: ${tokens.c3.c.toFixed(2)}, h: ${tokens.c3.h.toFixed(0)} },
+    c4: { l: ${tokens.c4.l.toFixed(2)}, c: ${tokens.c4.c.toFixed(2)}, h: ${tokens.c4.h.toFixed(0)} },
   }
 }`;
-
   navigator.clipboard.writeText(themeString);
 }
 
