@@ -1,6 +1,5 @@
 import { Presentations } from './Presentations';
-import { ToyBox, activeToy } from './ToyBox';
-import { createEffect, on } from 'solid-js';
+import { ToyBox } from './ToyBox';
 import { Description } from './Description';
 import { breakpoint } from '../utils/utils';
 import { EmailForm } from './EmailForm';
@@ -12,12 +11,6 @@ import { Info } from './Info';
 
 
 export function SideBar() {
-  let scrollRef!: HTMLDivElement;
-
-  createEffect(on(activeToy, () => {
-    scrollRef.scrollTop = scrollRef.scrollHeight;
-  }, { defer: true }));
-
   return (
     <div
       class="sidebar-wrapper"
@@ -37,7 +30,6 @@ export function SideBar() {
           <Banner/>
         </Display>
         <div
-          ref={scrollRef}
           style="
             overscroll-behavior: contain;
             flex-direction: column;

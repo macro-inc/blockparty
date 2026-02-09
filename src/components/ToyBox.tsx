@@ -8,7 +8,7 @@ import { createSignal } from 'solid-js';
 import { DitherM } from './DitherM';
 import { Display } from './Display';
 
-export const [activeToy, setActiveToy] = createSignal('logo');
+const [activeToy, setActiveToy] = createSignal('logo');
 
 export function ToyBox() {
   return (
