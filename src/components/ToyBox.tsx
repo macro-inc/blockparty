@@ -58,7 +58,7 @@ export function ToyBox() {
             <WireCube
               onPointerDown={() => {setActiveToy('block')}}
               classList={{
-                'active': activeToy() === 'cube',
+                'active': activeToy() === 'block',
                 'toy-icon': true,
               }}
               style="height: 34px;"
@@ -88,10 +88,6 @@ export function ToyBox() {
             <ToyBlock/>
           </Display>
 
-          <Display when={activeToy() == 'macro'}>
-            <ToyMacro/>
-          </Display>
-
           <Display when={activeToy() == 'theme'}>
             <div
               style="
@@ -104,6 +100,11 @@ export function ToyBox() {
               <ThemeList/>
             </div>
           </Display>
+
+          <Display when={activeToy() == 'macro'}>
+            <ToyMacro/>
+          </Display>
+
         </div>
       </div>
     </>
