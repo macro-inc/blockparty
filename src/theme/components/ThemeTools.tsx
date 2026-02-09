@@ -16,7 +16,7 @@ export function ThemeTools() {
   const currentThemeName = createMemo(() => {
     const theme = themes().find((theme) => theme.id === currentThemeId());
     if(isThemeSaved()){return theme?.name}
-    else{return 'Theme Name'}
+    else{return 'Untitled'}
   });
 
   const [showTrash, setShowTrash] = createSignal<boolean>(true);
