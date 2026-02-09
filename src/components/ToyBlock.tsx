@@ -1,4 +1,4 @@
-import { noiseMult, setNoiseMult } from "./Canvas";
+import { noiseMult, setNoiseMult, speedMult, setSpeedMult } from "./Canvas";
 
 export function ToyBlock() {
   return (
@@ -63,10 +63,10 @@ export function ToyBlock() {
 
         <div
           style={{
-            // 'left': `${(themeReactive.b0.c[0]() / (themeReactive.a0.c[0]() * 0.8) / 0.37) * 100}%`,
             'transform': 'translate(-50%, -50%)',
             'background-color': 'var(--b1)',
             'border': '1px solid var(--c4)',
+            'left': `${speedMult() * 100}%`,
             'box-sizing': 'border-box',
             'border-radius': '0px',
             'position': 'absolute',
@@ -77,9 +77,7 @@ export function ToyBlock() {
         />
 
         <input
-          onInput={(e) => {
-            // handleSaturationChange(e);
-          }}
+          onInput={(e) => {setSpeedMult(parseFloat(e.target.value))}}
           class="theme-editor-basic-slider"
           style="
             appearance: none;

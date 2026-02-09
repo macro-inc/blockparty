@@ -23,6 +23,14 @@ function noiseScale() {
   return noiseMin + (noiseMax - noiseMin) * noiseMult();
 }
 
+const speedMin = 0.1
+const speedMax = 1.0
+
+export const [speedMult, setSpeedMult] = createSignal(1.0);
+function getTime(){
+  return clock.getElapsedTime() * (speedMin + (speedMax - speedMin) * speedMult());
+}
+
 // Noise function
 const noise3D = createNoise3D();
 
@@ -101,7 +109,7 @@ function animate() {
   requestAnimationFrame(animate);
   if (!envReady) { return };
 
-  const time = clock.getElapsedTime() * 0.2;
+  const time = getTime();
 
   for (let i = 0; i < count; i++) {
     const x = positions[i * 3];
