@@ -26,9 +26,22 @@ function noiseScale() {
 const speedMin = 0.1
 const speedMax = 1.0
 
-export const [speedMult, setSpeedMult] = createSignal(1.0);
-function getTime(){
-  return clock.getElapsedTime() * (speedMin + (speedMax - speedMin) * speedMult());
+export const [speedMult, setSpeedMult] = createSignal(0.11);
+
+// Track animation time separately using delta time for smooth speed changes
+let animationTime = 0;
+let lastClockTime = 0;
+
+function getTime() {
+  const currentClockTime = clock.getElapsedTime();
+  const deltaTime = currentClockTime - lastClockTime;
+  lastClockTime = currentClockTime;
+
+  // Accumulate animation time based on current speed
+  const speed = speedMin + (speedMax - speedMin) * speedMult();
+  animationTime += deltaTime * speed;
+
+  return animationTime;
 }
 
 // Noise function
