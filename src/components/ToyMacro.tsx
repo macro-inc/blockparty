@@ -1,10 +1,6 @@
 import ditherM from '../assets/dither-m.gif?inline'
 
-function openMaps() {
-  window.location.href = "maps:q=122+Central+Ave+Brooklyn+New+York";
-}
-
-export function DitherM() {
+export function ToyMacro() {
   return (
     <div
       style="

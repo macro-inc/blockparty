@@ -5,10 +5,11 @@ import WireCrosshair from '../assets/wire-crosshair.svg';
 import WireCube from '../assets/wire-cube.svg';
 import WireLogo from '../assets/wire-logo.svg';
 import { createSignal } from 'solid-js';
-import { DitherM } from './DitherM';
+import { ToyMacro } from './ToyMacro';
+import { ToyBlock } from './ToyBlock';
 import { Display } from './Display';
 
-const [activeToy, setActiveToy] = createSignal('logo');
+const [activeToy, setActiveToy] = createSignal('macro');
 
 export function ToyBox() {
   return (
@@ -55,7 +56,7 @@ export function ToyBox() {
           "
         >
             <WireCube
-              onPointerDown={() => {setActiveToy('cube')}}
+              onPointerDown={() => {setActiveToy('block')}}
               classList={{
                 'active': activeToy() === 'cube',
                 'toy-icon': true,
@@ -70,7 +71,7 @@ export function ToyBox() {
               }}
             />
             <WireLogo
-              onPointerDown={() => {setActiveToy('logo')}}
+              onPointerDown={() => {setActiveToy('macro')}}
               classList={{
                 'active': activeToy() === 'logo',
                 'toy-icon': true,
@@ -83,8 +84,12 @@ export function ToyBox() {
             padding: 20px;
           "
         >
-          <Display when={activeToy() == 'logo'}>
-            <DitherM/>
+          <Display when={activeToy() == 'block'}>
+            <ToyBlock/>
+          </Display>
+
+          <Display when={activeToy() == 'macro'}>
+            <ToyMacro/>
           </Display>
 
           <Display when={activeToy() == 'theme'}>
