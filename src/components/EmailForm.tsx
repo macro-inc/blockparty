@@ -1,4 +1,5 @@
 import { createSignal } from 'solid-js';
+import { breakpoint } from '../utils/utils';
 
 export function EmailForm() {
   const [status, setStatus] = createSignal('');
@@ -15,7 +16,13 @@ export function EmailForm() {
       method: 'POST',
     });
 
-    setStatus(res.ok ? 'sent' : 'error');
+    if(res.ok) {
+      setStatus('sent');
+      setEmail('');
+      setName('');
+    } else {
+      setStatus('error');
+    }
   };
 
   return (
@@ -45,20 +52,20 @@ export function EmailForm() {
         >
           <input
             onInput={(e) => setName(e.currentTarget.value)}
-            style="
-              font-family: 'Courier New', Courier, monospace;
-              background-color: var(--b1);
-              box-sizing: border-box;
-              border-radius: none;
-              max-width: 516px;
-              color: var(--c4);
-              font-size: 16px;
-              padding: 0 8px;
-              outline: none;
-              height: 30px;
-              border: none;
-              width: 100%;
-            "
+            style={{
+              'font-family': '"Courier New", Courier, monospace',
+              'padding': breakpoint() ? ' 0 20px' : '0 8px',
+              'background-color': 'var(--b1)',
+              'box-sizing': 'border-box',
+              'border-radius': 'none',
+              'max-width': '516px',
+              'color': 'var(--c4)',
+              'font-size': '16px',
+              'outline': 'none',
+              'height': '30px',
+              'border': 'none',
+              'width': '100%'
+            }}
             placeholder="Name"
             value={name()}
             type="text"
@@ -74,20 +81,20 @@ export function EmailForm() {
         >
           <input
             onInput={(e) => setEmail(e.currentTarget.value)}
-            style="
-              font-family: 'Courier New', Courier, monospace;
-              background-color: var(--b1);
-              box-sizing: border-box;
-              border-radius: none;
-              max-width: 516px;
-              color: var(--c4);
-              font-size: 16px;
-              padding: 0 8px;
-              outline: none;
-              height: 30px;
-              border: none;
-              width: 100%;
-            "
+            style={{
+              'font-family': '"Courier New", Courier, monospace',
+              'padding': breakpoint() ? ' 0 20px' : '0 8px',
+              'background-color': 'var(--b1)',
+              'box-sizing': 'border-box',
+              'border-radius': 'none',
+              'max-width': '516px',
+              'color': 'var(--c4)',
+              'font-size': '16px',
+              'outline': 'none',
+              'height': '30px',
+              'border': 'none',
+              'width': '100%'
+            }}
             placeholder="Email"
             value={email()}
             type="email"
@@ -95,7 +102,6 @@ export function EmailForm() {
           />
         </div>
         <button
-
           style="
             font-family: 'Courier New', Courier, monospace;
             background-color: var(--c4);
