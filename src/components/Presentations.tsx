@@ -19,7 +19,7 @@ export function Presentations() {
       {/*<a href="" target="_blank" class="row"><div>Peter Whidden</div><hr/><div>Poke</div></a>*/}
       {/*<a href="https://greg.technology/" target="_blank" class="row"><div>Greg Sadetsky</div><hr/><div>Disco</div></a>*/}
       <a href="https://izz.ee/" target="_blank" class="row"><div>Issac Chabon</div><hr/><div>Calendar</div></a>
-      <a href="https://ezrizhu.com/" target="_blank" class="row"><div>Ezri Zhu</div><hr/><div>Wolfgirl</div></a>
+      <a href="mailto:russell@macro.com" class="row"><div>Maybe You</div><hr/><div>Email Me</div></a>
     </div>
   );
 }
