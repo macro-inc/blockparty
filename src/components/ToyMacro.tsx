@@ -4,11 +4,12 @@ export function ToyMacro() {
   return (
     <div
       style="
+        justify-content: center;
         display: grid;
         gap: 20px;
       "
     >
-      <svg fill="none" style="display: block; width: 100%;" stroke="var(--a0)" stroke-linecap="round" stroke-miterlimit="99" stroke-linejoin="round" stroke-width="0.2" viewBox="0 0 37 28" xmlns="http://www.w3.org/2000/svg">
+      <svg fill="none" style="display: block; width: 250px;" stroke="var(--a0)" stroke-linecap="round" stroke-miterlimit="99" stroke-linejoin="round" stroke-width="0.2" viewBox="0 0 37 28" xmlns="http://www.w3.org/2000/svg">
         <path   fill="oklch(from var(--a0) l c h / 0.1)" d="m20.51 15.501 3.3805-1.3255 12.693 11.996-3.378 1.3278z"/>
         <path d="m23.89 14.176v4.5204"/>
         <g transform="translate(0, -3)">
