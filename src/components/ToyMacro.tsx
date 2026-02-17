@@ -9,7 +9,7 @@ export function ToyMacro() {
       "
     >
       <svg fill="none" style="display: block; width: 100%;" stroke="var(--a0)" stroke-linecap="round" stroke-miterlimit="99" stroke-linejoin="round" stroke-width="0.2" viewBox="0 0 37 28" xmlns="http://www.w3.org/2000/svg">
-        <path   fill="var(--b3)" d="m20.51 15.501 3.3805-1.3255 12.693 11.996-3.378 1.3278z"/>
+        <path   fill="oklch(from var(--a0) l c h / 0.1)" d="m20.51 15.501 3.3805-1.3255 12.693 11.996-3.378 1.3278z"/>
         <path d="m23.89 14.176v4.5204"/>
         <g transform="translate(0, -3)">
           <animateTransform
@@ -38,7 +38,7 @@ export function ToyMacro() {
         <path fill="var(--b1)" stroke="none" d="m20.51 15.501-1.4402 0.0125v13.486h19v-2.8183l-1.486-0.0095-3.378 1.3278z"/>
         <path d="m20.51 15.501 12.696 11.999 3.378-1.3278"/>
 
-        <path   fill="var(--b3)" d="m6.4402 15.501 3.3805-1.3255 12.693 11.996-3.378 1.3278z"/>
+        <path   fill="oklch(from var(--a0) l c h / 0.1)" d="m6.4402 15.501 3.3805-1.3255 12.693 11.996-3.378 1.3278z"/>
         <path d="m9.8207 14.176v4.5204"/>
         <g transform="translate(0, -3)">
           <animateTransform
@@ -67,7 +67,7 @@ export function ToyMacro() {
         <path fill="var(--b1)" stroke="none" d="m6.4402 15.501-1.4402 0.0125v13.486h19v-2.8183l-1.486-0.0095-3.378 1.3278z"/>
         <path d="m6.4402 15.501 12.696 11.999 3.378-1.3278"/>
 
-        <path   fill="var(--b3)" d="m0.41661 23.097 3.3805-1.3255 4.6567 4.3976-3.3834 1.33z"/>
+        <path   fill="oklch(from var(--a0) l c h / 0.1)" d="m0.41661 23.097 3.3805-1.3255 4.6567 4.3976-3.3834 1.33z"/>
         <path d="m3.7971 21.772v4.5204"/>
         <g transform="translate(0, -3)">
           <animateTransform
