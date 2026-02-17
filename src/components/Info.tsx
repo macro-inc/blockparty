@@ -28,6 +28,7 @@ export function Info() {
           cursor: pointer;
           outline: none;
           border: none;
+          padding: 0;
         }
         @media(hover){
           button:hover{
