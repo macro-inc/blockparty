@@ -18,6 +18,7 @@ export function Presentations() {
       {/*<a href="https://eieio.games/" target="_blank" class="row"><div>Nolen Royalty</div><hr/><div>SSH Snake</div></a>*/}
       {/*<a href="" target="_blank" class="row"><div>Peter Whidden</div><hr/><div>Poke</div></a>*/}
       {/*<a href="https://greg.technology/" target="_blank" class="row"><div>Greg Sadetsky</div><hr/><div>Disco</div></a>*/}
+      <a href="https://minivac.greg.technology/" target="_blank" class="row"><div>Greg Sadetsky</div><hr/><div>Minivak</div></a>
       <a href="https://izz.ee/" target="_blank" class="row"><div>Issac Chabon</div><hr/><div>Calendar</div></a>
       <a href="mailto:russell@macro.com" class="row"><div>Maybe You</div><hr/><div>Email Me</div></a>
     </div>
