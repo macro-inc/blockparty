@@ -1,9 +1,7 @@
-import { copyThemeToClipboard, deleteTheme, exportTheme, invertTheme, saveTheme } from '../utils/themeUtils';
+import { deleteTheme, exportTheme, invertTheme, saveTheme } from '../utils/themeUtils';
 import { currentThemeId, isThemeSaved, themes } from '../signals/themeSignals';
-// import { DeprecatedIconButton } from '@core/component/DeprecatedIconButton';
 import { createEffect, createMemo, createSignal, Show } from 'solid-js';
 import IconLightDark from '../../assets/icon-lightdark.svg';
-import IconClipboard from '../../assets/icon-clipboard.svg';
 import IconRandom from '../../assets/icon-random.svg';
 import { randomizeTheme } from './ThemeEditorBasic';
 import IconTrash from "../../assets/icon-trash.svg";
@@ -23,14 +21,6 @@ export function ThemeTools() {
   createEffect(() => {
     if(isThemeSaved() && !DEFAULT_THEMES.find((t) => t.id === currentThemeId())){setShowTrash(true)}
     else{setShowTrash(false)}
-  });
-
-  const [columnCount, setColumnCount] = createSignal(3);
-  createEffect(() => {
-    let count = 3;
-    if(!isThemeSaved()){count++}
-    if(showTrash()){count++}
-    setColumnCount(count);
   });
 
   return (
@@ -116,6 +106,7 @@ export function ThemeTools() {
 
       <div ref={themeName}
         style="
+          text-decoration: none;
           white-space: nowrap;
           outline: none;
         "
