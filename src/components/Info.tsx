@@ -4,12 +4,12 @@ import { createSignal } from "solid-js";
 
 export function Info() {
   const [emailText, setEmailText] = createSignal(<><span aria-hidden="true">??? </span>russell@macro.com</>);
-  const [dateText, setDateText] = createSignal(<>Friday Febuary 27 7pm - 11pm</>);
+  const [dateText, setDateText] = createSignal(<>Friday March 6 7pm - 11pm</>);
 
   function copyDate() {
     setDateText(<>·····················copied!</>);
-    navigator.clipboard.writeText("Friday Febuary 27 7pm - 11pm");
-    setTimeout(() => {setDateText(<>Friday Febuary 27 7pm - 11pm</>)}, 500);
+    navigator.clipboard.writeText("Friday March 6 7pm - 11pm");
+    setTimeout(() => {setDateText(<>Friday March 6 7pm - 11pm</>)}, 500);
   }
 
   function copyEmail() {
